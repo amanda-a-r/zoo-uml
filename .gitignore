@@ -4,3 +4,57 @@
 *.jar
 *.war
 *.ear
+public class zoo{
+  private String name;
+  private String species;
+  protected String location;
+  public String animal;
+  private double height;
+  private int weight;
+  private int energy = 100;
+  
+  
+  public zoo(String n, String s, String l,String a, double h,int w){
+    name=n;
+    species=s;
+    location=l;
+    animal=a;
+    height=h;
+    weight=w;
+  }
+  
+  public int feeding(int amount){
+    if (energy < 100){
+      energy += amount/2 ;
+      weight += weight*1.4;
+      return weight + energy;
+    } else {
+      return energy + weight;
+    }
+  }
+    
+    public int play(int energy){
+      if (energy > 0){
+        energy = energy - 5;
+        weight += Math.round((weight*0.23456));
+        return weight + energy; 
+      } else{
+         return energy + weight;
+    }
+  }
+    public String getName(){
+      return name;
+    }
+    
+    public String getAnimal(){ 
+      return animal;
+    }
+    
+    public int getWeight(){
+      return weight;
+    }
+    public double getHeight(){
+      return height;
+    }
+    
+}
