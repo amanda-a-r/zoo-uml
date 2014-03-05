@@ -57,4 +57,41 @@ public class zoo{
       return height;
     }
     
+    public zoo(String n, String s, String l,String a, double h,int w){
+  name=n;
+  species=s;
+  location=l;
+  animal=a;
+  height=h;
+  weight=w;
+}
+/**Method that changes the name of an animal 
+  * @param newName:String
+  * @return new name
+  **/
+ protected String changeName(String newName){
+  name=newName;
+  return name;}
+/**Method that changes the height of the animal in meters to inches
+  * @param m:double
+  * @return height in inches 
+   **/
+private double meterToInches (double m){
+  height=(m*0.0254);//-meterToInches(h: int): double, comeone check if this fine 
+  return height;} 
+
+/**Method that calculates the number of hours slept
+  * @param hour:integer
+  * @return hours slept
+  **/
+public int sleep(int hour){
+  if(energy>0){ 
+    energy+=hour*2;
+    return energy;
+  }else{
+  return hour;
+}
+}
+}
+
 }
