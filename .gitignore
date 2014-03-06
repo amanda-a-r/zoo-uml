@@ -90,17 +90,19 @@ public int sleep(int hour){
   }else{
   return hour;
   
-  /**Method that makes a list of each animal in the zoo
+      /**Method that makes a list of each animal in the zoo
       * @param:none
       * @return a list of the animals in the zoo
       **/
-      
-      
-      
+  public String listAnimals(){
+  
+  
+  
   /**Method that makes a list of each animals species 
     *@param:none
     *@return the species of each animal in a list
     **/
+    public String listSpecies(){
     
     
     
@@ -108,7 +110,8 @@ public int sleep(int hour){
     * @param:none
     * @return the location of each animal's origin in a list
     **/ 
-    
+      public String listLocation(){
+ 
     
     
 }
