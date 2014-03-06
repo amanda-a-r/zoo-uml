@@ -22,7 +22,10 @@ public class zoo{
     height=h;
     weight=w;
   }
-  
+  /**Method that calculates energy gained from food
+  *@param amount:integer
+  *@return energy gained 
+  **/
   public int feeding(int amount){
     if (energy < 100){
       energy += amount/2 ;
@@ -32,8 +35,12 @@ public class zoo{
       return energy + weight;
     }
   }
+  /**Method that calculates amount of energy used to play
+  *@param: none
+  *@return amount of energy used to play
+  **/
     
-    public int play(int energy){
+    public int play(){
       if (energy > 0){
         energy = energy - 5;
         weight += Math.round((weight*0.23456));
@@ -42,18 +49,18 @@ public class zoo{
          return energy + weight;
     }
   }
-    public String getName(){
+    public String getName(){//records name
       return name;
     }
     
-    public String getAnimal(){ 
+    public String getAnimal(){ //records animal
       return animal;
     }
     
-    public int getWeight(){
+    public int getWeight(){ //records weight 
       return weight;
     }
-    public double getHeight(){
+    public double getHeight(){ //records height
       return height;
     }
     
