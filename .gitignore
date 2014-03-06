@@ -76,7 +76,7 @@ public class zoo{
   * @return height in inches 
    **/
 private double meterToInches (double m){
-  height=(m*0.0254);//-meterToInches(h: int): double, comeone check if this fine 
+  height=(m*0.0254); //1 meter=0.0254 inches
   return height;} 
 
 /**Method that calculates the number of hours slept
@@ -85,7 +85,7 @@ private double meterToInches (double m){
   **/
 public int sleep(int hour){
   if(energy>0){ 
-    energy+=hour*2;
+    energy+=hour*2; //energy amount multiplied by hours times 2
     return energy;
   }else{
   return hour;
