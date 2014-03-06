@@ -14,13 +14,13 @@ public class zoo{
   private int energy = 100;
   
   
-  public zoo(String n, String s, String l,String a, double h,int w){
+  public zoo(String n, String s, String l,String a, double h,int w){ //various categories to know about each animal
     name=n;
     species=s;
     location=l;
     animal=a;
-    height=h;
-    weight=w;
+    height=h;//in meters
+    weight=w;//in pounds
   }
   /**Method that calculates energy gained from food
   *@param amount:integer
@@ -64,14 +64,6 @@ public class zoo{
       return height;
     }
     
-    public zoo(String n, String s, String l,String a, double h,int w){
-  name=n;
-  species=s;
-  location=l;
-  animal=a;
-  height=h;
-  weight=w;
-}
 /**Method that changes the name of an animal 
   * @param newName:String
   * @return new name
