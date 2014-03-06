@@ -89,6 +89,28 @@ public int sleep(int hour){
     return energy;
   }else{
   return hour;
+  
+  /**Method that makes a list of each animal in the zoo
+      * @param:none
+      * @return a list of the animals in the zoo
+      **/
+      
+      
+      
+  /**Method that makes a list of each animals species 
+    *@param:none
+    *@return the species of each animal in a list
+    **/
+    
+    
+    
+  /**Method that list the orgins of each animal in in the zoo
+    * @param:none
+    * @return the location of each animal's origin in a list
+    **/ 
+    
+    
+    
 }
 }
 }
