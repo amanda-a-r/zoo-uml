@@ -95,6 +95,8 @@ public int sleep(int hour){
       * @return a list of the animals in the zoo
       **/
   public String listAnimals(){
+     for(int l=0; l<0; l++){
+     int[]lists= new lists[animsla.length(i)]
   
   
   
