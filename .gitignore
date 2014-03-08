@@ -1,20 +1,12 @@
-*.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
-public class zoo{
+package Part2; 
+public class Zoo{
   private String name;
   private String species;
   protected String location;
   public String animal;
   private double height;
   private int weight;
-  private int energy = 100;
-  
-  
-  public zoo(String n, String s, String l,String a, double h,int w){ //various categories to know about each animal
+  public Zoo(String n, String s, String l,String a, double h,int w){ //various categories to know about each animal
     name=n;
     species=s;
     location=l;
@@ -23,10 +15,11 @@ public class zoo{
     weight=w;//in pounds
   }
   /**Method that calculates energy gained from food
-  *@param amount:integer
-  *@return energy gained 
-  **/
-  public int feeding(int amount){
+    *@param amount:integer
+    *@return energy gained 
+    **/
+  public int feeding(int amount, int energy){
+    energy = 100;
     if (energy < 100){
       energy += amount/2 ;
       weight += weight*1.4;
@@ -36,88 +29,95 @@ public class zoo{
     }
   }
   /**Method that calculates amount of energy used to play
-  *@param: none
-  *@return amount of energy used to play
-  **/
-    
-    public int play(){
-      if (energy > 0){
-        energy = energy - 5;
-        weight += Math.round((weight*0.23456));
-        return weight + energy; 
-      } else{
-         return energy + weight;
+    *@param: none
+    *@return amount of energy used to play
+    **/
+  
+  public int play(int energy){
+    energy = 100;
+    if (energy > 0){
+      energy = energy - 5;
+      weight += Math.round((weight*0.23456));
+      return weight + energy; 
+    } else{
+      return energy + weight;
     }
   }
-    public String getName(){//records name
-      return name;
-    }
+  public String getName(){//records name
+    return name;
+  }
+  
+  public String getAnimal(){ //records animal
+    return animal;
+  }
+  
+  public int getWeight(){ //records weight 
+    return weight;
+  }
+  public double getHeight(){ //records height
+    return height;
+  }
+  
+  public String getSpecies(){//record Species
+    return species;
+  }
+  public String getLocation(){//record district
+    return location;
+  }
+  public String newName(String name){//records name
     
-    public String getAnimal(){ //records animal
-      return animal;
-    }
+    return name;
+  }
+  
+  public String newAnimal(String name){ //records animal
     
-    public int getWeight(){ //records weight 
-      return weight;
-    }
-    public double getHeight(){ //records height
-      return height;
-    }
+    return animal;
+  }
+  
+  public int newWeight(int weight){ //records weight
     
-/**Method that changes the name of an animal 
-  * @param newName:String
-  * @return new name
-  **/
- protected String changeName(String newName){
-  name=newName;
-  return name;}
-/**Method that changes the height of the animal in meters to inches
-  * @param m:double
-  * @return height in inches 
-   **/
-private double meterToInches (double m){
-  height=(m*0.0254); //1 meter=0.0254 inches
-  return height;} 
-
-/**Method that calculates the number of hours slept
-  * @param hour:integer
-  * @return hours slept
-  **/
-public int sleep(int hour){
-  if(energy>0){ 
-    energy+=hour*2; //energy amount multiplied by hours times 2
-    return energy;
-  }else{
-  return hour;
+    return weight;
+  }
+  public double newHeight(double height){ //records height
+    
+    return height;
+  }
   
-      /**Method that makes a list of each animal in the zoo
-      * @param:none
-      * @return a list of the animals in the zoo
-      **/
-  public String listAnimals(){
-     for(int l=0; l<0; l++){
-     int[]lists= new lists[animsla.length(i)]
+  public String newSpecies(String species){//record Species
+    
+    return species;
+  }
+  public String newLocation(String location){//record district
+    
+    return location;
+  }
   
-  
-  
-  /**Method that makes a list of each animals species 
-    *@param:none
-    *@return the species of each animal in a list
+  /**Method that changes the name of an animal 
+    * @param newName:String
+    * @return new name
     **/
-    public String listSpecies(){
-    
-    
-    
-  /**Method that list the orgins of each animal in in the zoo
-    * @param:none
-    * @return the location of each animal's origin in a list
-    **/ 
-      public String listLocation(){
- 
-    
-    
-}
-}
-}
-
-}
+  protected String changeName(String newName){
+    name=newName;
+    return name;}
+  /**Method that changes the height of the animal in meters to inches
+    * @param m:double
+    * @return height in inches 
+    **/
+  private double meterToInches (double m){
+    height=(m*0.0254); //1 meter=0.0254 inches
+    return height;} 
+  
+  /**Method that calculates the number of hours slept
+    * @param hour:integer
+    * @return hours slept
+    **/
+  public int sleep(int hour, int energy){
+    energy = 100;
+    if(energy>0){ 
+      energy+=hour*2; //energy amount multiplied by hours times 2
+      return energy;
+    }else{
+      return hour;
+    }
+  }
+  
