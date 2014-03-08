@@ -1,2 +1,34 @@
-public class main{
-  
+import java.io.*;
+
+public class Main{
+  public static void main(String[] args) throws IOException{ // throws exception
+    // reads text file and scans information
+    BufferedReader check = new BufferedReader(new FileReader("animal.txt"));
+    BufferedReader in = new BufferedReader(new FileReader("animal.txt"));
+    //Declare variables
+    int n = 0;
+    String str; 
+    //Set while loop to read through each line and store everything in str
+    while ((str = in.readLine ()) != null){  
+      n++;
+    }  
+    //Declare Arrays
+    Zoo[] a = new Zoo[n];
+    //set forloops to isolate each line one by one
+    for (int i=0; i<n; i++){
+      //Split apart everyline of the code
+      String[] input = in.readLine().split(",");
+      //store each split up line it its own array
+      a[i] = new Zoo(
+                      input[0].trim(), 
+                      input[1].trim(),
+                      input[2].trim(),
+                      input[3].trim(),
+                     //Change the double value into an integer
+                      Double.parseDouble(input[4].trim()), 
+                     //Change it into an integer value
+                      Integer.parseInt(input[5].trim()));
+    }
+    
+  }
+}
